@@ -169,3 +169,59 @@ realizando edição para atualizar a entrada e/ou saída de mercadorias
 O produto Mouse sem fio desaparece da lista.
 
 
+## Cenário de Teste 3: Controle de Acesso por Perfil de Usuário ##
+
+Passos a Executar
+
+3.1
+
+**(Admin)** Logado como admin, verifique a seção "Gerenciamento de Usuários".
+
+O botão "Cadastrar Novo Usuário" deve estar visível e habilitado.
+
+
+Somente o usuário administrador pode cadastrar , 
+
+
+Mínimo 2 tipos de perfis (Administrador / Comum) 
+
+3.2
+
+**(Admin)** Clique em "Cadastrar Novo Usuário". Na nova janela, cadastre um usuário com os dados: Usuário: joao, Senha: 123, Perfil: Comum. Clique em "Cadastrar".
+
+Uma mensagem de sucesso aparece e a janela de cadastro fecha.
+
+
+Somente administrador poderá cadastrar usuário 
+
+
+3.3
+
+**(Logout e Login Comum)** Clique em "Sair" para fazer logout. Faça login com o novo usuário: joao e senha 123.
+
+O login é bem-sucedido. A tela principal exibe a mensagem "Bem-vindo(a), joao (Comum)".
+
+
+Login e senha para validar o usuário 
+
+3.4
+
+**(Verificação de Permissão)** Logado como joao (Comum), verifique a seção "Gerenciamento de Usuários".
+
+O botão "Cadastrar Novo Usuário" NÃO deve estar visível. Em seu lugar, deve haver um texto informativo (ex: "Apenas administradores podem cadastrar...").
+
+
+Perfil de usuário (Administrador / Comum) , 
+
+Somente o usuário administrador pode cadastrar 
+
+
+3.5
+
+**(Funcionalidade Comum)** Logado como joao, tente adicionar, editar e excluir um produto.
+
+Todas as operações de gerenciamento de produtos (Cenário 2) devem funcionar normalmente para o usuário comum.
+
+
+desenvolver uma aplicação de controle de estoque, onde será possível cadastrar um produto realizando edição...
+
