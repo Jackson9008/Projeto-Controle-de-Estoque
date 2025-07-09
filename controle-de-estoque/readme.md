@@ -69,3 +69,51 @@
 |
 |-- modelagem_dados.md   # Detalhes da modelagem do banco de dados
 |-- fluxograma.md        # Descrição do fluxo da aplicação
+
+## Como testar aplicação: 
+**Cenário de Teste 1: Autenticação, Segurança e Sessão de Usuário.**
+
+**Passos a Executar**
+1.1
+
+Na tela de login, deixe os campos "Usuário" e "Senha" vazios e clique em "Entrar".
+Uma janela de erro deve aparecer com a mensagem "Usuário e senha não podem ser vazios.". 
+Validações nos campos , 
+
+
+**Validação e autenticação do usuário**
+1.2
+
+Digite um usuário inválido (ex: teste) e qualquer senha. Clique em "Entrar".
+Uma janela de erro deve aparecer com a mensagem "Usuário ou senha inválidos.".
+
+**Validação e autenticação do usuário** 
+1.3
+
+Digite o usuário admin e uma senha incorreta (ex: 12345). Clique em "Entrar".
+Uma janela de erro deve aparecer com a mensagem "Usuário ou senha inválidos.".
+Criptografia de senha (A comparação é feita com o hash, não com texto plano), 
+
+**Validação do usuário** 
+1.4
+
+Digite o usuário admin e a senha correta admin. Clique em "Entrar".
+A tela de login fecha e a tela principal da aplicação é exibida. A mensagem "Bem-vindo(a), admin (Administrador)" deve aparecer.
+
+Validação de usuário (login e senha) , 
+Conexão com o banco de dados , 
+Sessão de usuário , 
+
+**Perfil de usuário** 
+
+1.5
+Na tela principal, clique no botão "Sair".
+A tela principal fecha e a aplicação retorna para a tela de login.
+Sessão de usuário , 
+Facilidade de navegação.
+
+## Final do Código ##
+
+
+
+
