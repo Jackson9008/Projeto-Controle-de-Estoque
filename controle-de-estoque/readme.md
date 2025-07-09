@@ -112,8 +112,60 @@ A tela principal fecha e a aplicação retorna para a tela de login.
 Sessão de usuário , 
 Facilidade de navegação.
 
-## Final do Código ##
+
+## Cenário de Teste 2: Gerenciamento de Produtos (CRUD) ##
+
+2.1
+
+**(Validação)** Na tela principal, com os campos de produto vazios, clique em "Adicionar Produto".
+
+Uma janela de erro deve aparecer com a mensagem "Nome, Quantidade e Qtd. Mínima são campos obrigatórios.". 
 
 
+Validações nos campos , 
+
+Conter campo obrigatório 
+
+2.2
+
+**(Validação)** Preencha o nome, mas coloque um texto no campo "Quantidade" (ex: abc). Clique em "Adicionar Produto".
+
+Uma janela de erro deve aparecer com a mensagem "Quantidade e Qtd. Mínima devem ser números inteiros.". 
+
+
+Validações nos campos 
+
+2.3
+
+**(Adicionar)** Preencha os campos com dados válidos (ex: Nome: Mouse sem fio, Descrição: Logitech MX, Qtd: 20, Qtd. Mínima: 10). Clique em "Adicionar Produto".
+
+Uma mensagem de sucesso aparece e o novo produto é exibido na lista. Os campos do formulário são limpos.
+
+
+Cadastro de produto / material no estoque 
+
+2.4
+
+**(Alerta Visual)** Adicione outro produto onde a quantidade é menor que a mínima (ex: Nome: Teclado Gamer, Qtd: 4, Qtd. Mínima: 5).
+
+O produto Teclado Gamer deve aparecer na lista com a linha destacada em cor diferente (vermelho/salmão).
+
+
+Listagem de produtos abaixo de uma quantidade mínima colocar em destaque 
+
+2.5
+
+**(Editar)** Selecione o Mouse sem fio na lista. Os dados devem preencher o formulário. Altere a quantidade para 15 e clique em "Atualizar Produto".
+
+Uma mensagem de sucesso aparece e a quantidade do mouse na lista é atualizada para 15.
+
+
+realizando edição para atualizar a entrada e/ou saída de mercadorias 
+
+2.6
+
+**(Excluir)** Selecione o Mouse sem fio na lista. Clique em "Excluir Produto". Uma janela de confirmação deve aparecer. Clique em "Sim".
+
+O produto Mouse sem fio desaparece da lista.
 
 
