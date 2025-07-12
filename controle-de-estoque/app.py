@@ -5,7 +5,7 @@ from tkinter import ttk, messagebox
 import sqlite3
 import hashlib
 import os
-
+from database import connect_db, init_db, hash_password
 
 # --- Aplicação Principal ---
 
