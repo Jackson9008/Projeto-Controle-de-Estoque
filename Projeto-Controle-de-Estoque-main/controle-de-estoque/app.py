@@ -5,7 +5,7 @@ from tkinter import ttk, messagebox
 from database import connect_db, init_db, hash_password
 
 
-# --- Aplicação Principal ---
+# ---  Aplicação Principal  ---
 
 class StockControlApp(tk.Tk):
     def __init__(self):
