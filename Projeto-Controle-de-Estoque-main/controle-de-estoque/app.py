@@ -10,7 +10,7 @@ from database import connect_db, init_db, hash_password
 class StockControlApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Sistema de Controle de Estoque")
+        self.title("Sistema de Controle de Estoque - Estudo de Caso - UniFecaf")
         self.geometry("900x600")
         self.current_user = None
 
@@ -169,7 +169,7 @@ class MainFrame(tk.Frame):
             int(self.min_qty_entry.get())
             return True
         except:
-            messagebox.showerror("Erro", "Qtd. e Qtd. Mín. devem ser inteiros.")
+            messagebox.showerror("Erro", "Qtd. e Qtd. Mín. devem ser inteiros !!")
             return False
 
     def add_product(self):
@@ -286,7 +286,7 @@ class UserRegistrationWindow(tk.Toplevel):
         cursor = conn.cursor()
         cursor.execute("SELECT id FROM users WHERE username = ?", (username,))
         if cursor.fetchone():
-            messagebox.showerror("Erro", "Usuário já existe.", parent=self)
+            messagebox.showerror("Erro", "Este usuário já existe.", parent=self)
             conn.close()
             return
 
